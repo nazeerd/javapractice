@@ -8,6 +8,13 @@ public class CreateObject {
 	public static void main(String[] args) {
 		CreateObject c1 = new CreateObject();
 		c1.printMsg("Hi");
+		try {
+			CreateObject c2 = (CreateObject) c1.clone();
+			c2.printMsg("Im cloning object");
+		} catch (CloneNotSupportedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 	}
 	
